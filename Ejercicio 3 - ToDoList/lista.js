@@ -73,7 +73,7 @@ async function agregarTarea() {
     }
 
     listaDeTareas.push(crearTarea(titulo, descripcion, vencimiento, dificultad));
-    console.log('¡✅ Datos guardados!.');
+    console.log('¡Datos guardados!.');
     
 }
 
@@ -261,7 +261,7 @@ async function modificarTarea(tituloTarea, idTarea){
                         tareaEditada.Titulo = nuevoTitulo;
                     }
                     tareaEditada.UltimaEdicion = new Date();
-                    console.log('¡✅ Datos guardados!.');
+                    console.log('¡Datos guardados!.');
                 break;
                 case 2:
                     let nuevaDescripcion = await preguntar("Ingrese la nueva descripcion (Enter para mantener): ");
@@ -275,17 +275,17 @@ async function modificarTarea(tituloTarea, idTarea){
                         tareaEditada.Descripcion = nuevaDescripcion;
                     }
                     tareaEditada.UltimaEdicion = new Date();
-                    console.log('¡✅ Datos guardados!.');
+                    console.log('¡Datos guardados!.');
                 break;
                 case 3:
                     tareaEditada.Estado = await seleccionarEstado();
                     tareaEditada.UltimaEdicion = new Date();
-                    console.log('¡✅ Datos guardados!.');
+                    console.log('¡Datos guardados!.');
                 break;
                 case 4:
                     tareaEditada.Dificultad = await seleccionarDificultad(tareaEditada.Dificultad);
                     tareaEditada.UltimaEdicion = new Date();
-                    console.log('¡✅ Datos guardados!.');
+                    console.log('¡Datos guardados!.');
                 break;
                 case 5:
                     let nuevaFecha = await preguntar("Ingrese el vencimiento DD/MM/AAAA (Enter para mantener): ");
@@ -300,7 +300,7 @@ async function modificarTarea(tituloTarea, idTarea){
                         tareaEditada.Vencimiento = fechaConvertida;
                     }
                     tareaEditada.UltimaEdicion = new Date();
-                    console.log('¡✅ Datos guardados!.');
+                    console.log('¡Datos guardados!.');
                 break;
             }
     }while(op!=0);
